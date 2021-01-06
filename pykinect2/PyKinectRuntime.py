@@ -162,8 +162,8 @@ class PyKinectRuntime(object):
         self._last_infrared_frame = None
         self._last_long_exposure_infrared_frame = None
         self._last_audio_frame = None
-
-        start_clock = time.clock()
+        
+        start_clock = time.perf_counter()
         self._last_color_frame_access = self._last_color_frame_time = start_clock
         self._last_body_frame_access = self._last_body_frame_time = start_clock
         self._last_body_index_frame_access = self._last_body_index_frame_time = start_clock
